@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MAIN EVENT | BP Media House</title>
+    <style>
+        /* --- RESET & BASIC STYLES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Impact', 'Arial Narrow', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            text-align: center;
+        }
+        a { text-decoration: none; color: white; }
+        
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #333;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #d32f2f; /* Fight Red */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid #d32f2f;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: transparent;
+            color: #d32f2f;
+        }
+        .placeholder-img {
+            background-color: #222;
+            border: 2px dashed #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-family: sans-serif;
+            margin: 0 auto;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            padding: 20px;
+            background: #000;
+            border-bottom: 2px solid #d32f2f;
+        }
+        nav h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* --- HERO / FIGHT SECTION --- */
+        .fight-header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #d32f2f;
+            text-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+        }
+        .fighters-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .fighter-card {
+            flex: 1;
+            min-width: 300px;
+        }
+        .fighter-card h2 {
+            font-size: 2.5rem;
+            margin: 15px 0;
+        }
+        .vs {
+            font-size: 5rem;
+            color: #d32f2f;
+            font-style: italic;
+            padding: 0 20px;
+        }
+        .fighter-img { width: 300px; height: 400px; }
+        
+        /* Faceoff Image Container */
+        .faceoff-container {
+            width: 100%;
+            max-width: 800px;
+            height: 568px;
+            margin: 40px auto 0 auto;
+            background: #222;
+        }
+
+        /* --- TICKET SECTION --- */
+        .ticket-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x600/111/333?text=Arena+Background');
+            background-size: cover;
+            padding: 100px 20px;
+        }
+        .ticket-section h2 { font-size: 3rem; margin-bottom: 20px; }
+        .ticket-section p { font-family: sans-serif; font-size: 1.2rem; margin-bottom: 20px; }
+
+        /* --- TEAM SECTION (FLEXBOX FIXED) --- */
+        .team-section h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #d32f2f;
+            display: inline-block;
+        }
+        
+        .team-grid {
+            display: flex;             
+            flex-wrap: wrap;           
+            justify-content: center;   /* Centers items in the row */
+            gap: 30px;
+            width: 100%;
+        }
+
+        .team-member {
+            background: #1a1a1a;
+            padding: 20px;
+            border: 1px solid #333;
+            transition: transform 0.2s;
+            
+            /* SIMPLIFIED WIDTH SETTINGS */
+            width: 300px;              /* Forces specific width */
+            max-width: 100%;           /* Prevents overflow on mobile */
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            border-color: #d32f2f;
+        }
+        .role {
+            color: #d32f2f;
+            font-size: 0.9rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>BP MEDIA HOUSE PRESENTS</h1>
+    </nav>
+
+    <section class="section fight-header">
+        <div class="container">
+            <h1>The Showdown</h1>
+            <p style="font-family: sans-serif; color: #888;">SATURDAY NIGHT • MAIN EVENT</p>
+
+            <div class="fighters-grid">
+                <div class="fighter-card">
+                    <div class="placeholder-img fighter-img">
+                        <img src="images/tank.png" alt="suryansh" style="width:100%; height:100%; object-fit:cover; border: 2px solid #333;">
+                    </div>
+                    <h2>THE TANK</h2>
+                </div>
+
+                <div class="vs">VS</div>
+
+                <div class="fighter-card">
+                    <div class="placeholder-img fighter-img">
+                         <img src="images/titan.jpeg" alt="suryansh" style="width:100%; height:100%; object-fit:cover; border: 2px solid #333;">
+                    </div>
+                    <h2>THE TITAN</h2>
+                </div>
+            </div>
+
+            <div class="faceoff-container">
+                 <img src="images\faceoff.jpeg" alt="Faceoff" style="width:100%; height:100%; object-fit:cover; border: 2px solid #333;">
+            </div>
+
+            <div style="margin-top: 40px;">
+                <p style="font-family: sans-serif; margin-bottom: 10px;">OFFICIAL FIGHT DOCUMENTATION</p>
+                <a href="contract/palceholder.pdf" download class="btn" style="font-size: 1rem; padding: 10px 20px; border: 1px solid white; background: transparent;">
+                    View Signed Contract (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ticket-section">
+        <div class="container">
+            <h2>GET RINGSIDE SEATS</h2>
+            <p>Don't miss the beatdown of the century. Limited capacity.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScqugdgM6Zfh0ghBWYPdpJZeHbH4Me8cEzdlkIdrDDxVso1pw/viewform?usp=publish-editor" target="_blank" class="btn">BUY TICKETS NOW</a>
+        </div>
+    </section>
+
+    <section class="section team-section">
+        <div class="container">
+            <h2>BP MEDIA HOUSE TEAM</h2>
+            <div class="team-grid">
+                
+                <div class="team-member">
+                    <div class="role">CEO</div>
+                    <div class="name">Ekansh Wadhwa</div>
+                    <div class="description">[part-time solutionist, full-time pedophile]</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="role">COO</div>
+                    <div class="name">Shaurya Vardhan</div>
+                    <div class="description">[400 lbs food-connoisseur]</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="role">CTO</div>
+                    <div class="name">Parth Tehlan</div>
+                    <div class="description">[hi]</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="role">CFO</div>
+                    <div class="name">Pranit Sachdeva</div>
+                    <div class="description">[part-time pedophile, full-time alcoholic]</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="role">CMO</div>
+                    <div class="name">Hansika</div>
+                    <div class="description">[professional crush-rotator]</div>
+                </div>
+
+                <div class="team-member">
+                    <div class="role">CMO</div>
+                    <div class="name">Arnav Jain</div>
+                    <div class="description">[gurgaon sector-10A survivor]</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 20px; background: #000; font-family: sans-serif; font-size: 0.8rem; color: #555;">
+        &copy; 2024 BP Media House. All rights reserved.
+    </footer>
+
+</body>
+</html>
